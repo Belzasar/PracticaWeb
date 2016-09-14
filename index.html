@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Practica</title>
+    </head>
+    <body>
+        <font color="green">Ingrese los Datos</font>
+        <br>
+        <br>
+        <form>
+            Nombre:
+            <input type="text" id="nombre">
+            <br>
+            <br>
+            Apellido:
+            <input type="text" id="apellido">
+            <br>
+            <br>
+            Correo:
+            <input type="text" id="correo">
+            <br>
+            <br>
+            Ciudad:
+            <input type="text" id="ciudad">
+            <br>
+            <br>
+            Telefono:
+            <input type="text" id="telefono">
+            <br>
+            <br>
+            <input type="button" value="Enviar" onclick="Datos();">
+        </form>
+
+        <script>
+            function Datos(nombre,apellido,correo,ciudad,telefono){
+                var nombre = document.getElementById("nombre").value;
+                var apellido = document.getElementById("apellido").value;
+                var correo = document.getElementById("correo").value;
+                var ciudad = document.getElementById("ciudad").value;
+                var telefono = document.getElementById("telefono").value;
+
+                var datos = alert(nombre +"\n"+ apellido +"\n"+ correo +"\n"+ ciudad +"\n"+ telefono);
+                return datos;
+            }
+        </script>
+    </body>
+</html>
