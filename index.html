@@ -1,48 +1,39 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <meta charset="utf-8">
-        <title>Practica</title>
-    </head>
-    <body>
-        <font color="green">Ingrese los Datos</font>
-        <br>
-        <br>
-        <form>
-            Nombre:
-            <input type="text" id="nombre">
-            <br>
-            <br>
-            Apellido:
-            <input type="text" id="apellido">
-            <br>
-            <br>
-            Correo:
-            <input type="text" id="correo">
-            <br>
-            <br>
-            Ciudad:
-            <input type="text" id="ciudad">
-            <br>
-            <br>
-            Telefono:
-            <input type="text" id="telefono">
-            <br>
-            <br>
-            <input type="button" value="Enviar" onclick="Datos();">
-        </form>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Practica</title>
 
-        <script>
-            function Datos(nombre,apellido,correo,ciudad,telefono){
-                var nombre = document.getElementById("nombre").value;
-                var apellido = document.getElementById("apellido").value;
-                var correo = document.getElementById("correo").value;
-                var ciudad = document.getElementById("ciudad").value;
-                var telefono = document.getElementById("telefono").value;
+	<link rel="stylesheet" href="style.css">
 
-                var datos = alert(nombre +"\n"+ apellido +"\n"+ correo +"\n"+ ciudad +"\n"+ telefono);
-                return datos;
-            }
-        </script>
-    </body>
+</head>
+<body>
+	<div class="content">
+		<fieldset>
+			<legend>Ingrese los Datos</legend>
+			<form>
+				<label>Nombre: </label>
+				<input type="text" id="nombre"
+					maxlength="10"
+					autofocus>
+
+				<label>Apellido: </label>
+				<input type="text" id="apellido" maxlength="10">
+
+				<label>Correo:</label>
+				<input type="email" id="correo" maxlength="10">
+
+				<label>Ciudad: </label>
+				<input type="text" id="ciudad" maxlength="10">
+
+				<label>Telefono: </label>
+				<input type="text" id="telefono" maxlength="10">
+
+				<input type="submit" class="button" onclick="Datos();" value="Enviar" />
+			</form><!-- ./ form -->
+		</fieldset><!-- ./ fieldset -->
+	</div><!-- ./ content -->
+
+	<script src="script.js"></script>
+</body>
 </html>
